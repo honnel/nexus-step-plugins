@@ -1,0 +1,19 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/service/local/repositories/releases/content/com/simplifyops/rundeck/plugin/nexus/1.0.1/nexus-1.0.1.jar",
+        "basicAuthCredentials" : {
+            "username" : "john.doe",
+            "password" : "123456"
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+
+            "Content-Type": "application/java-archive"
+
+        },
+        "bodyFileName": "nexus-1.0.1.jar"
+    }
+}

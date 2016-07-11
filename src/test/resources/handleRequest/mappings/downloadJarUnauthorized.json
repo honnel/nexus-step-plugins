@@ -1,0 +1,19 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/service/local/artifact/maven/redirect?g=com.simplifyops.rundeck.plugin&a=nexus&v=1.0.1&r=releases&p=jar",
+        "headers": {
+            "Authorization": {
+                "absent" : true
+            }
+        }
+    },
+    "response": {
+        "status": 401,
+        "headers": {
+            "Content-Type": "text/html",
+            "WWW-Authenticate": "Basic realm=\"Sonatype Nexus Repository Manager API\""
+        },
+        "bodyFileName": "unauthorizedResponse.html"
+    }
+}

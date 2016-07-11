@@ -75,7 +75,17 @@ public class NexusRegisterArtifactDeliveryStepPlugin implements StepPlugin {
     @PluginProperty(title = "Nexus", description = "Nexus server URL. eg, http://repository.example.com:8081", required = true, scope=PropertyScope.Project)
     private String nexus;
 
-
+    NexusRegisterArtifactDeliveryStepPlugin(String group, String artifact, String version, String packaging, String classifier, String repo, String destinationPath, String modelDirPath, String nexus) {
+        this.group = group
+        this.artifact = artifact
+        this.version = version
+        this.packaging = packaging
+        this.classifier = classifier
+        this.repo = repo
+        this.destinationPath = destinationPath
+        this.modelDirPath = modelDirPath
+        this.nexus = nexus
+    }
 
     @Override
     public void executeStep(final PluginStepContext context, final Map<String, Object> configuration)

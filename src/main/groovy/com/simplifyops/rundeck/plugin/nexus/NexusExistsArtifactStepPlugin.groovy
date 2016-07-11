@@ -68,9 +68,17 @@ public class NexusExistsArtifactStepPlugin implements StepPlugin {
     @PluginProperty(title = "Nexus Password", description = "Nexus login password", required = true, scope=PropertyScope.Project)
     private String nexusPassword;
 
-
-
-
+    NexusExistsArtifactStepPlugin(String group, String artifact, String version, String packaging, String classifier, String repo, String nexus, String nexusUser, String nexusPassword) {
+        this.group = group
+        this.artifact = artifact
+        this.version = version
+        this.packaging = packaging
+        this.classifier = classifier
+        this.repo = repo
+        this.nexus = nexus
+        this.nexusUser = nexusUser
+        this.nexusPassword = nexusPassword
+    }
 
     @Override
     public void executeStep(final PluginStepContext context, final Map<String, Object> configuration)

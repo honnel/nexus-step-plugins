@@ -1,0 +1,16 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/service/local/artifact/maven/redirect?g=com.simplifyops.rundeck.plugin&a=nexus&v=1.0.1&r=releases&p=jar",
+        "basicAuthCredentials" : {
+            "username" : "john.doe",
+            "password" : "123456"
+        }
+    },
+    "response": {
+        "status": 307,
+        "headers": {
+            "Location": "http://localhost:8080/service/local/repositories/releases/content/com/simplifyops/rundeck/plugin/nexus/1.0.1/nexus-1.0.1.jar"
+        }
+    }
+}
