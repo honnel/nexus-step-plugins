@@ -33,4 +33,13 @@ class NexusHttpRequestHandlerIntegrationTest {
 
         NexusHttpRequestHandler.handleRequest('http://localhost:8080', 'john.doe', '123456', query, successHandler)
     }
+
+    @Test
+    public void testResolveArtifactFileName() {
+        def query = NexusHttpRequestHandler.buildQuery('com.simplifyops.rundeck.plugin', 'nexus', '1.0.1', 'releases', 'jar', null)
+
+        def artifactName = NexusHttpRequestHandler.resolveArtifactFileName('http://localhost:8080', 'john.doe', '123456', query)
+
+        assert artifactName == 'nexus-1.0.1.jar'
+    }
 }
